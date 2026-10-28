@@ -411,4 +411,7 @@ async function show(page){
 </script></main></body></html>`);
 });
 
-app.listen(PORT,()=>console.log(`RubyNova berjalan di http://localhost:${PORT}`));
+module.exports = app;
+if (require.main === module) {
+  app.listen(PORT, () => console.log(`RubyNova aktif di port ${PORT}`));
+}
